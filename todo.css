@@ -1,0 +1,108 @@
+
+  
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #b7c3db, #e9eef7);
+  min-height: 100vh;
+}
+ 
+
+.main {
+  width: 90%;
+  max-width: 450px;
+
+  margin: 40px auto;   /* key fix */
+  background: linear-gradient(180deg, #aabbdd, #c3c7cf);
+
+  padding: 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+input,button,select{
+    color: rgb(49, 48, 48);
+    padding:8px;
+    border-radius: 3px;
+    /*border-color: rgb(107, 105, 105);*/
+    border: none;
+    margin-bottom: 15px;
+}
+
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #c4bebe;
+  border-radius: 6px;
+  background: #b4b0b0;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.todo span {
+  flex: 1;
+}
+.main {
+  transition: 0.2s;
+}
+
+.main:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 600px) {
+
+  /* make main container full width */
+  .main {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  /* stack input, button, select vertically */
+  .main > div {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* input full width */
+  .input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* make buttons and select full width */
+  button,
+  select {
+    width: 100%;
+  }
+
+  /* todo items layout adjustment */
+  .todo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* actions (buttons row) */
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* make action buttons equal width */
+  .actions button {
+    flex: 1;
+  }
+}

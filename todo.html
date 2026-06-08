@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="todo.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <h1>TO DO LIST</h1>
+        <div>
+            <input type="text"  placeholder="Enter Your ToDo" class="input" onkeydown="key(event);">
+            <button onclick="addtodo()">ADD</button>
+            <select onchange="changefilter(this.value)">
+                <option value="all">All</option>
+                <option value="active">Active</option>
+                <option value="completed">Completed</option>
+            </select>
+
+        </div>
+        <div class="list"></div>
+
+    </div>
+    
+
+    <script src="todo.js"> </script>  
+</body>
+</html>
